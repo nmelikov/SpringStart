@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import com.example.SpringStart.login.domain.model.User;
 import com.example.SpringStart.login.domain.repository.UserDao;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -22,5 +24,13 @@ public class UserService {
         }
 
         return result;
+    }
+
+    public int count(){
+        return dao.count();
+    }
+
+    public List<User> selectMany() {
+        return dao.selectMany();
     }
 }
